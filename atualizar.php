@@ -1,6 +1,6 @@
 <?php
 
-    $id = $_GET[ 'id' ];
+    $id = $_POST[ 'id' ];
     $nomeLivro= $_POST[ 'nomeLivro' ];
     $autorLivro = $_POST[ 'autorLivro' ];
     $dataLancamento = $_POST[ 'dataLancamento' ];
