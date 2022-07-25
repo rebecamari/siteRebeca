@@ -1,9 +1,9 @@
 <?php
 
-    $id = $_POST[ 'id' ];
-    $nomeLivro= $_POST[ 'nomeLivro' ];
-    $autorLivro = $_POST[ 'autorLivro' ];
-    $dataLancamento = $_POST[ 'dataLancamento' ];
+    $id = isset($_POST['id']) ? $_POST['id'] : NULL;
+    $nomeLivro = isset($_POST['nomeLivro']) ? $_POST['nomeLivro'] : '';
+    $autorLivro = isset($_POST['autorLivro']) ? $_POST['autorLivro'] : '';
+    $dataLancamento = isset($_POST['dataLancamento']) ? $_POST['dataLancamento'] : '';
 
     $pdo = null;
 
@@ -15,19 +15,18 @@
             '',
             [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ]
         );
-
+                            
         $ps = $pdo->prepare(
-            'UPDATE livros SET nomeLivro = :nl, autorLivro = :ul, dataLancamento = :dl WHERE id = :id'
+            'UPDATE livros SET nomeLivro = ?, autorLivro = ?, dataLancamento = ? WHERE id = ?'
         );
-
+        
         $ps->execute([
-            'nl' => $nomeLivro,
-            'ul' => $autorLivro,
-            'dl' => $dataLancamento
+            $nomeLivro, 
+            $autorLivro, 
+            $dataLancamento
         ]);
-
-        $ps->rowCount();
-
+            
+        $ps->fetchAll( PDO::FETCH_ASSOC );
         header('Location: listarLivro.php');
 
     } catch ( PDOException $e){

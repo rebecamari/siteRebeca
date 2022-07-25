@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="estiloButton.css" rel="stylesheet">
     <title>Listagem dos Livros Cadastrados</title>
 </head>
 <body>
@@ -54,14 +55,16 @@
 
                     foreach ( $livros as $l ) {
                         echo <<<HTML
-                            <tr>
-                                <td>${l['id']}</td>
-                                <td>${l['nomeLivro']}</td>
-                                <td>${l['autorLivro']}</td>
-                                <td>${l['dataLancamento']}</td>
-                                <td><a href="deletar.php?id=${l['id']}">Deletar</a> </td>
-                                <td><a href="atualizar.php?id=${l['id']}">Atualizar</a> </td>
-                            </tr>
+                            <div class="container-btn">
+                                <tr>
+                                    <td>${l['id']}</td>
+                                    <td>${l['nomeLivro']}</td>
+                                    <td>${l['autorLivro']}</td>
+                                    <td>${l['dataLancamento']}</td>
+                                    <td><button type="submit" class="btn verde"><a href="deletar.php?id=${l['id']}">Deletar</a></button> </td>
+                                    <td><button type="submit" class="btn vermelho"><a href="atualizar.php?id=${l['id']}">Atualizar</a></button></td>
+                                </tr>
+                            </div>
                         HTML;
                     }
                 ?>
