@@ -11,7 +11,7 @@
     
     <header>
         <div>
-            <a href="cadastrarLivro.html">Cadastrar Livro</a>
+            <a href="../html/cadastrarLivro.html">Cadastrar Livro</a>
             <h1>Livros Cadastrados</h1>
         </div>
     </header>
@@ -28,16 +28,17 @@
             <tbody> 
                 
                 <?php
+                    
                     $pdo = null;
                     $livros = [];
 
                     try{
 
                         $pdo = new PDO(
-                            'mysql:dbname=livraria;host:127.0.0.1',
+                            'mysql:dbname=livraria; host:127.0.0.1',
                             'root',
                             '',
-                            [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ]
+                            [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ] 
                         );
 
                         $ps = $pdo->prepare(
@@ -61,8 +62,8 @@
                                     <td>${l['nomeLivro']}</td>
                                     <td>${l['autorLivro']}</td>
                                     <td>${l['dataLancamento']}</td>
-                                    <td><button type="submit" class="btn verde"><a href="deletar.php?id=${l['id']}">Deletar</a></button> </td>
-                                    <td><button type="submit" class="btn vermelho"><a href="atualizar.php?id=${l['id']}">Atualizar</a></button></td>
+                                    <td><button type="submit"><a href="deletar.php?id=${l['id']}">Deletar</a></button> </td>
+                                    <td><button type="submit"><a href="../html/atualizar.html?id=${l['id']}">Atualizar</a></button></td>
                                 </tr>
                             </div>
                         HTML;

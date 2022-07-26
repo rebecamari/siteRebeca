@@ -1,19 +1,14 @@
-<?php
-
+<?php    
     $nomeLivro = $_POST[ 'nomeLivro'];
     $autorLivro =  $_POST[ 'autorLivro' ];
     $dataLancamento = $_POST[ 'dataLancamento' ];
 
+    require_once 'conexao.php';
     $pdo = null;
-
+    
     try{
 
-        $pdo = new PDO(
-            'mysql:dbname=livraria;host:127.0.0.1',
-            'root',
-            '',
-            [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ]
-        );
+        $pdo = conexaoPDO();
 
         $ps = $pdo->prepare(
             'INSERT INTO livros ( nomeLivro, autorLivro, dataLancamento ) VALUES ( :nl, :al, :dl )' );
