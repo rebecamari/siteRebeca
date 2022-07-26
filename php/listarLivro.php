@@ -29,17 +29,13 @@
                 
                 <?php
                     
+                    require_once 'conexao.php';
                     $pdo = null;
                     $livros = [];
 
                     try{
 
-                        $pdo = new PDO(
-                            'mysql:dbname=livraria; host:127.0.0.1',
-                            'root',
-                            '',
-                            [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ] 
-                        );
+                        $pdo = conexaoPDO();
 
                         $ps = $pdo->prepare(
                             'SELECT * FROM livros'
@@ -63,7 +59,7 @@
                                     <td>${l['autorLivro']}</td>
                                     <td>${l['dataLancamento']}</td>
                                     <td><button type="submit"><a href="deletar.php?id=${l['id']}">Deletar</a></button> </td>
-                                    <td><button type="submit"><a href="../html/atualizar.html?id=${l['id']}">Atualizar</a></button></td>
+                                    <td><button type="submit"><a href="listarPorId.php?id=${l['id']}">Atualizar</a></button></td>
                                 </tr>
                             </div>
                         HTML;

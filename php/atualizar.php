@@ -1,6 +1,11 @@
 <?php
     require_once 'conexao.php';
     
+    if( !array_key_exists('idLivro', $_POST) ){
+        http_response_code(400);
+        die('ID não encontradio');
+    }
+    
     $id = $_POST['idLivro'];
     $nomeLivro = $_POST['nomeLivro'];
     $autorLivro = $_POST['autorLivro'];
