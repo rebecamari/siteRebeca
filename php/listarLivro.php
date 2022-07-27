@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="estiloButton.css" rel="stylesheet">
+    <link href="../css/reset.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
     <title>Listagem dos Livros Cadastrados</title>
 </head>
+
 <body>
-    
     <header>
-        <div>
+        <nav>
+            <h1>Biblioteca da Rebeca</h1>
             <a href="../html/cadastrarLivro.html">Cadastrar Livro</a>
-            <h1>Livros Cadastrados</h1>
-        </div>
+        </nav>
     </header>
+    <main>
+        <h1>Livros Cadastrados</h1>
 
-    <div>         
         <table>
-
             <thead>
                 <tr>
-                    <th>ID</th><th>Nome do Livro</th><th>Autor do Livro</th><th>Data de Lançamento</th>
+                    <th>ID</th>
+                    <th>Nome do Livro</th>
+                    <th>Autor do Livro</th>
+                    <th>Data de Lançamento</th>
                 </tr>
             </thead>
-
-            <tbody> 
-                
-                <?php
+            <tbody>
+            <?php
                     
                     $pdo = null;
                     $livros = [];
@@ -53,7 +56,6 @@
                          echo 'Erro ao Connectar', $e->getMessage(), '<br />';
                     }
 
-
                     foreach ( $livros as $l ) {
                         echo <<<HTML
                             <div class="container-btn">
@@ -71,6 +73,6 @@
                 ?>
             </tbody>
         </table>
-    </div>
+    </main>
 </body>
 </html>
