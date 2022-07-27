@@ -65,14 +65,11 @@
                                         <td><input type="text" id="nomeLivro" name="nomeLivro" value="${l['nomeLivro']}"></td>
                                         <td><input type="text" id="autorLivro" name="autorLivro" value="${l['autorLivro']}"></td>
                                         <td><input type="date" id="dataLancamento" name="dataLancamento" value="${l['dataLancamento']}"></td>
-                                        <!-- <button type="submit">Atualizar</button> -->
+                                        <td><button type="submit">Atualizar</button></td>
                                     </tr>
-                                    <button type="submit">Atualizar</button>
                                 </div>
                             </form>
-                            <!-- <div>
-                                <button type="submit">Atualizar</button>
-                            </div> -->
+                            
                         HTML;
                     }
                 ?>
