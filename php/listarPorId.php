@@ -21,7 +21,7 @@
 
             <thead>
                 <tr>
-                    <th>ID</th><th>Nome do Livro</th><th>Autor do Livro</th><th>Data de Lançamento</th>
+                    <th>Id</th><th>Nome do Livro</th><th>Autor do Livro</th><th>Data de Lançamento</th>
                 </tr>
             </thead>
 
