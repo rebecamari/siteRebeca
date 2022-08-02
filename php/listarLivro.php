@@ -74,7 +74,7 @@
                                     <td>${l['autorLivro']}</td>
                                     <td>${l['dataLancamento']}</td>
                                     <td><button type="submit"><a href="deletar.php?id=${l['id']}">Deletar</a></button> </td>
-                                    <td><button type="submit"><a href="listarPorId.php?id=${l['id']}">Atualizar</a></button></td>
+                                    <td><button type="submit"><a href="atualizarListar.php?id=${l['id']}">Atualizar</a></button></td>
                                 </tr>
                             </div>
                         HTML;
