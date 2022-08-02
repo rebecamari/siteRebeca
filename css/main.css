@@ -1,34 +1,128 @@
 body {
     box-sizing: border-box;
-    width: 80vw;
+    width: 54.7vw;
     text-align: center;
     margin: 0 auto;
-    background-image: url(../img/background.jpeg);
-    color: white;
+    background-color: #292929;
+    /* background-image: url(../img/background.jpeg); */
+    color: #A370F0;
     margin-bottom: 10vw;
+    font-family: 'Nunito', sans-serif;
 }
 
 table {
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 25px;
-    color: black;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: #A370F0;
 }
 
 th {
-    padding: 2vw;
+    padding: 2vw 1.7vw;
     font-size: x-large;
 }
 
 header {
-    margin-top: 10vw;
+    margin-top: 4vw;
 }
 
 h1 {
     font-size: xx-large;
     font-weight: 900;
+    margin: 0;
 }
 
-a:hover {
+a,
+a:visited,
+a:hover,
+a:active {
     text-decoration: none;
+    color: #A370F0;
+    align-self: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    color: #A370F0;
+    font-weight: 600;
+    font-size: larger;
+}
+
+.cssbuttons-io-button {
+    background: #A370F0;
+    color: white;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #714da6;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+}
+
+.cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+    right: 0.3em;
+    transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #7b52b9;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+}
+
+main {
+    margin-top: 5vw;
+}
+
+form {
+    margin: 0 auto;
+    padding: 2vw;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: #A370F0;
+    width: fit-content;
+}
+
+label {
+    display: block;
+    text-align: start;
+    font-size: large;
+    font-weight: 600;
 }
