@@ -41,30 +41,32 @@
                     <th>Data de Lançamento</th>
                 </tr>
             </thead>
+
+
             <tbody>
-                <!-- <?php
+                <?php
 
-                        require_once 'conexao.php';
-                        $pdo = null;
-                        $livros = [];
+                    require_once 'conexao.php';
+                    $pdo = null;
+                    $livros = [];
 
-                        try {
+                    try {
 
-                            $pdo = conexaoPDO();
+                        $pdo = conexaoPDO();
 
-                            $ps = $pdo->prepare(
-                                'SELECT * FROM livros'
-                            );
+                        $ps = $pdo->prepare(
+                            'SELECT * FROM livros'
+                        );
 
-                            $ps->execute();
+                        $ps->execute();
 
-                            $livros = $ps->fetchAll(PDO::FETCH_ASSOC);
-                        } catch (PDOException $e) {
-                            echo 'Erro ao Connectar', $e->getMessage(), '<br />';
-                        }
+                        $livros = $ps->fetchAll(PDO::FETCH_ASSOC);
+                    } catch (PDOException $e) {
+                        echo 'Erro ao Connectar', $e->getMessage(), '<br />';
+                    }
 
-                        foreach ($livros as $l) {
-                            echo <<<HTML
+                    foreach ($livros as $l) {
+                        echo <<<HTML
                             <div class="container-btn">
                                 <tr>
                                     <td>${l['id']}</td>
@@ -76,8 +78,8 @@
                                 </tr>
                             </div>
                         HTML;
-                        }
-                        ?> -->
+                    }
+                ?> 
             </tbody>
         </table>
     </main>

@@ -19,7 +19,7 @@
             'dl' => $dataLancamento
         ] );
         
-        header('Location: listarLivro.php');
+        header('Location: ../php/listarLivro.php');
 
     } catch( PDOException $e ){
         echo 'Erro: ', $e->getMessage(), '<br />';
