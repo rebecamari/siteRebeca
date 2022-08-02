@@ -127,7 +127,7 @@ label {
     font-weight: 600;
 }
 
-#obs{
+.obs{
     color: white;
 }
 #footer{
@@ -140,4 +140,9 @@ label {
 }
 li {
     list-style-type: none;
+}
+.tamanho {
+    
+    width: 100%;
+    padding: 1%;
 }
