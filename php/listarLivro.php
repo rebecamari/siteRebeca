@@ -17,7 +17,11 @@
 <body>
     <header>
         <nav>
-            <h1><i class="fa-solid fa-book-open"></i> Biblioteca</h1>
+            <h1>
+                <i class="fa-solid fa-book-open"></i>
+                <a href="../index.html">Biblioteca</a>
+            </h1>
+            
             <!-- <button><i class="fa-solid fa-plus"></i><a class="cadastro" href="../html/cadastrarLivro.html"> Cadastrar novo livro</a></button> -->
             <a href="../html/cadastrarLivro.html"><button class="cssbuttons-io-button"> Cadastrar novo livro
                 <div class="icon">
@@ -83,6 +87,11 @@
             </tbody>
         </table>
     </main>
+
+    <footer id="footer">
+        <p>REBECA MARI ASSUMPÇÃO DOS SANTOS</p>
+        <h2 id="cf">CEFET/RJ</h2>
+    </footer>
 </body>
 
 </html>

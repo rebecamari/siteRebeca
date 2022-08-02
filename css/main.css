@@ -138,3 +138,6 @@ label {
     bottom: 0;
     left: 0;
 }
+li {
+    list-style-type: none;
+}
